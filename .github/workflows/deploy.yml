@@ -1,17 +1,16 @@
-name: Github Actions 실행해보기 #workflow 의 이름
+name: Github Actions 실행해보기
 
-#실행되는 시점 설정 : main branch에서 push가 실행 될때
+# 실행되는 시점 설정: main branch에서 push가 실행될 때
 on:
   push:
-    branchs:
+    branches:
       - main
 
-
-#실행 명령 설정
+# 실행 명령 설정
 jobs:
-  My-Deploy-Job: # job을 식별하기 위한 iㅇ
+  My-Deploy-Job:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Hellow World 출력
-      run: echo "Hello World"
+      - name: Hello World 출력
+        run: echo "Hello World"
